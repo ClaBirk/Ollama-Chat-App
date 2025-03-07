@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A2E3F" />
+      <stop offset="100%" stop-color="#1A1C28" />
+    </linearGradient>
+    <linearGradient id="glow-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#537BA2" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#3A5676" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect width="512" height="512" rx="80" fill="url(#bg-gradient)" />
+  
+  <!-- Glow effect -->
+  <circle cx="256" cy="256" r="180" fill="url(#glow-gradient)" filter="url(#glow)" />
+  
+  <!-- Chat bubble left -->
+  <path d="M130,190 L210,190 C225,190 240,205 240,220 L240,280 C240,295 225,310 210,310 L160,310 L130,340 Z" 
+        fill="#1E2433" stroke="#537BA2" stroke-width="8" />
+  
+  <!-- Chat bubble right -->
+  <path d="M380,220 L300,220 C285,220 270,235 270,250 L270,310 C270,325 285,340 300,340 L350,340 L380,370 Z" 
+        fill="#28334C" stroke="#537BA2" stroke-width="8" />
+  
+  <!-- Ollama "O" symbol -->
+  <circle cx="256" cy="158" r="46" fill="none" stroke="#537BA2" stroke-width="12" />
+  
+  <!-- Chat lines in left bubble -->
+  <line x1="155" y1="230" x2="215" y2="230" stroke="#537BA2" stroke-width="8" stroke-linecap="round" />
+  <line x1="155" y1="260" x2="195" y2="260" stroke="#537BA2" stroke-width="8" stroke-linecap="round" />
+  
+  <!-- Chat lines in right bubble -->
+  <line x1="295" y1="260" x2="355" y2="260" stroke="#537BA2" stroke-width="8" stroke-linecap="round" />
+  <line x1="295" y1="290" x2="335" y2="290" stroke="#537BA2" stroke-width="8" stroke-linecap="round" />
+  <line x1="295" y1="230" x2="355" y2="230" stroke="#537BA2" stroke-width="8" stroke-linecap="round" />
+</svg>
